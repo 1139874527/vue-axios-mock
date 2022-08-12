@@ -1,24 +1,28 @@
 
 
 import { axiosMock } from './lib/core.js'
-
-export default (Vue,options) => {
-    let opt = null
-    if(!options){
-        let comments
-        try{
-            comments = require.context("../../aMock", true, /.(js)$/) 
-            if( comments.keys() && comments.keys()[0]){
-                let name = comments.keys()[0].match(/^.\/(.*).js$/)[1]
-                if(name !== 'config') return
-                let modlue = require("../../aMock/config.js")
-                opt = modlue.default
+import log from "./lib/log.js"
+export default (Vue,options,config = null) => { 
+    if(options) return axiosMock(options,config)
+    let comments , modlue
+    try{
+        comments = require.context("../../aMock", true, /.(js)$/) 
+        if( comments.keys() && comments.keys().length > 0){
+            let nameArray = []
+            comments.keys().forEach(res => {
+                    let name = res.match(/^.\/(.*).js$/)[1] || ""
+                    nameArray.push(name)
+            })
+            if(nameArray.find(res => res === "config")){
+                modlue = require("../../aMock/config.js")
+                return axiosMock(modlue.default,modlue.config)
             }
-        }catch(err){
-            console.error("【axios】",err);
+            // if(nameArray.find(res => res === "index")){
+            //     modlue = require("../../aMock/index1.js")
+            //     axiosMock(modlue.default,modlue.config)  
+            // }  
         }
-    }else{
-        opt = options
+    }catch(err){
+        log.pretty("axios-mock",err);
     }
-    axiosMock(opt)
 }
