@@ -17,10 +17,6 @@ export default (Vue,options,config = null) => {
                 modlue = require("../../aMock/config.js")
                 return axiosMock(modlue.default,modlue.config)
             }
-            // if(nameArray.find(res => res === "index")){
-            //     modlue = require("../../aMock/index1.js")
-            //     axiosMock(modlue.default,modlue.config)  
-            // }  
         }
     }catch(err){
         log.pretty("axios-mock",err);
