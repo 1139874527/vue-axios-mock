@@ -10,8 +10,8 @@ export default (Vue,options,config = null) => {
         if( comments.keys() && comments.keys().length > 0){
             let nameArray = []
             comments.keys().forEach(res => {
-                    let name = res.match(/^.\/(.*).js$/)[1] || ""
-                    nameArray.push(name)
+                let name = res.match(/^.\/(.*).js$/)[1] || ""
+                nameArray.push(name)
             })
             if(nameArray.find(res => res === "config")){
                 modlue = require("../../aMock/config.js")
