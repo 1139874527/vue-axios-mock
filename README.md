@@ -3,9 +3,8 @@
 基于vue的一个插件，进行简单配置，在不修改业务代码的情况下，可以使原生axios返回自定义模拟数据。
 <a name="LXHYl"></a>
 ## 安装
-当前支持离线安装，下载安装包到桌面
 ```javascript
-npm i C:\Users\Administrator\Desktop\axios-hook-mock-1.0.1.tgz --save
+npm i vue-axios-mock --save
 ```
 <a name="Od6Cj"></a>
 ## 演示
