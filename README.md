@@ -4,7 +4,7 @@
 <a name="LXHYl"></a>
 ## 安装
 ```javascript
-npm i vue-axios-mock --save
+npm i vue-axios-mock -D
 ```
 <a name="Od6Cj"></a>
 ## 演示
@@ -18,7 +18,7 @@ axios.get('/api/query').then(res=>{
 ```
 代理请求
 ```javascript
-axiosMock from 'axios-hook-mock'
+axiosMock from 'vue-axios-mock'
 Vue.use(axiosMock,{ "query":[1,2,3,4,5,6,7,8,9] )
                    
 //query为需要代理的部分请求url，后面为自定义返回数据
@@ -35,7 +35,7 @@ axios.get('/api/query').then(res=>{
 <a name="cPNAo"></a>
 ## 引入
 ```javascript
-axiosMock from 'axios-hook-mock'
+axiosMock from 'vue-axios-mock'
 Vue.use(axiosMock)
 ```
 <a name="v1Ntu"></a>
@@ -45,7 +45,7 @@ Vue.use(axiosMock)
 ### 参数式代理
 参数式代理使用时，向Vue.use(axiosMock,options)传入自定义代理选项即可。
 ```javascript
-axiosMock from 'axios-hook-mock'
+axiosMock from 'vue-axios-mock'
 let options = {
   "query":[1,2,3,4,5,6,7,8,9],
   "api/list":{data:[],success:false}
@@ -79,7 +79,7 @@ export default {
 ### cus模式
 参数式
 ```javascript
-axiosMock from 'axios-hook-mock'
+axiosMock from 'vue-axios-mock'
 let options = {
   "pms/bill/query|cus":{
     data:[1,2,3,4,5,6,7,8,9],
@@ -331,4 +331,6 @@ let config = {
 Vue.use(axiosMock,options,config)
 ```
 全局设置 mock 为 false，会关闭本插件的代理功能。<br />全局设置 tip 为 false，会关闭本插件的请求日志打印功能。
+
+大佬们，都看完了，不妨给个star吧。https://github.com/1139874527/vue-axios-mock
 
