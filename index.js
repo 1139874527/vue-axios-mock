@@ -1,9 +1,9 @@
 import { axiosMock } from './lib/core.js'
 import log from './lib/log.js'
 export default (Vue, options, config = null) => {
-  log.info('vue-axios-mock', '本插件仅在开发环境下生效！文档地址：https://www.npmjs.com/package/vue-axios-mock', '#35495E')
   // 仅开发模式代码生效
   if (process.env.NODE_ENV !== 'development') return
+  log.info('vue-axios-mock', '本插件仅在开发环境下生效！文档地址：https://www.npmjs.com/package/vue-axios-mock', '#35495E')
   // 参数式代理优先级更高
   if (options) return axiosMock(options, config)
   try {
