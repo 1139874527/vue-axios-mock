@@ -1,21 +1,23 @@
 {
   "name": "vue-axios-mock",
-  "version": "1.0.3",
-  "description": "一款在vue项目中使用针对axios的mock工具",
+  "version": "1.0.6",
+  "description": "一款在vue2项目中使用针对axios的mock工具",
   "main": "index.js",
   "directories": {
     "lib": "lib",
-    "build":"webpack"
+    "build": "webpack"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+  "keywords": [
+    "vue项目数据模拟",
+    "axios拦截"
+  ],
+  "types": "index.d.ts",
   "author": "gcshi",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.21.1"
-  },
+  "license": "MIT",
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "repository": {
     "url": "https://github.com/1139874527/vue-axios-mock"
   }
