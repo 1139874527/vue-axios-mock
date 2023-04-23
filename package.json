@@ -1,6 +1,6 @@
 {
   "name": "vue-axios-mock",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "一款在vue2项目中使用针对axios的mock工具",
   "main": "index.js",
   "directories": {
