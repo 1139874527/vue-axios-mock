@@ -16,7 +16,8 @@
   "license": "MIT",
   "files": [
     "lib",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "repository": {
     "url": "https://github.com/1139874527/vue-axios-mock"
